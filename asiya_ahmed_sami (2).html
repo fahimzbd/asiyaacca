@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asiya Ahmed Sami | Accountant & Tax Specialist</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --bg:       #0e0e0e;
+  --bg2:      #141414;
+  --bg3:      #1a1a1a;
+  --card:     #181818;
+  --border:   #2a2a2a;
+  --gold:     #c9a84c;
+  --gold-lt:  #e2c07a;
+  --white:    #f5f5f5;
+  --muted:    #888;
+  --dim:      #555;
+  --body-txt: #b0b0b0;
+  --radius:   6px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+/* ===== NAV ===== */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 18px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(14,14,14,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-logo {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--white); }
+
+.nav-cta {
+  background: var(--gold);
+  color: #0e0e0e !important;
+  padding: 9px 22px;
+  border-radius: var(--radius);
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  transition: background 0.2s !important;
+}
+
+.nav-cta:hover { background: var(--gold-lt) !important; color: #0e0e0e !important; }
+
+/* ===== HERO ===== */
+#hero {
+  min-height: 100vh;
+  padding: 120px 60px 80px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg-text {
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+  font-size: 28vw;
+  font-weight: 900;
+  color: rgba(255,255,255,0.015);
+  pointer-events: none;
+  white-space: nowrap;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  font-family: 'Playfair Display', serif;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 60px;
+}
+
+.hero-left { flex: 1; }
+
+.hero-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.hero-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1.0;
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.hero-name .firstname { display: block; color: var(--white); }
+.hero-name .lastname  { display: block; color: var(--gold); }
+
+.hero-tagline {
+  font-size: 1rem;
+  color: var(--body-txt);
+  max-width: 460px;
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: #0e0e0e;
+  padding: 13px 28px;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover { background: var(--gold-lt); }
+
+.btn-outline {
+  border: 1px solid var(--border);
+  color: var(--white);
+  padding: 13px 28px;
+  border-radius: var(--radius);
+  font-weight: 500;
+  font-size: 0.82rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+/* Stats bar */
+.hero-stats {
+  display: flex;
+  gap: 0;
+  margin-top: 56px;
+  border-top: 1px solid var(--border);
+  padding-top: 32px;
+}
+
+.stat-item {
+  flex: 1;
+  padding-right: 32px;
+  border-right: 1px solid var(--border);
+  margin-right: 32px;
+}
+
+.stat-item:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 4px;
+}
+
+/* Hero image side */
+.hero-right {
+  flex-shrink: 0;
+  position: relative;
+}
+
+.hero-img-wrap {
+  width: 340px;
+  height: 420px;
+  position: relative;
+}
+
+.hero-img-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--dim);
+  font-size: 0.8rem;
+}
+
+.hero-img-placeholder svg {
+  opacity: 0.3;
+}
+
+.hero-img-deco {
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.acca-chip {
+  position: absolute;
+  bottom: 20px;
+  left: -24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.acca-chip-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  background: #C8102E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.acca-chip-text .top { font-size: 0.7rem; font-weight: 700; color: var(--white); }
+.acca-chip-text .bot { font-size: 0.65rem; color: var(--muted); }
+
+/* ===== SECTION COMMONS ===== */
+section { padding: 96px 60px; }
+
+.section-inner { max-width: 1100px; margin: 0 auto; }
+
+.section-eyebrow {
+  font-size: 0.68rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-eyebrow::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+  display: block;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 48px;
+  line-height: 1.2;
+}
+
+/* ===== ABOUT ===== */
+#about { background: var(--bg2); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-left h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  color: var(--white);
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.about-left h3 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.about-left p {
+  color: var(--body-txt);
+  line-height: 1.8;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+}
+
+.about-right h4 {
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.bring-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.bring-item {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  font-size: 0.8rem;
+  color: var(--body-txt);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bring-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+/* ===== EXPERIENCE ===== */
+#experience { background: var(--bg); }
+
+.exp-timeline { display: flex; flex-direction: column; gap: 0; }
+
+.exp-item {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 0;
+  position: relative;
+}
+
+.exp-item::before {
+  content: '';
+  position: absolute;
+  left: 199px;
+  top: 28px;
+  bottom: -1px;
+  width: 1px;
+  background: var(--border);
+}
+
+.exp-item:last-child::before { display: none; }
+
+.exp-left {
+  padding: 28px 32px 28px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.exp-dates {
+  font-size: 0.72rem;
+  color: var(--gold);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: right;
+}
+
+.exp-type {
+  font-size: 0.68rem;
+  color: var(--dim);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: right;
+}
+
+.exp-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--bg);
+  position: absolute;
+  left: 195px;
+  top: 30px;
+}
+
+.exp-right {
+  padding: 28px 0 28px 40px;
+  border-left: 1px solid var(--border);
+}
+
+.exp-current-badge {
+  display: inline-block;
+  background: rgba(201,168,76,0.12);
+  border: 1px solid rgba(201,168,76,0.3);
+  color: var(--gold);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.exp-role {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.exp-company {
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 14px;
+}
+
+.exp-desc {
+  font-size: 0.85rem;
+  color: var(--body-txt);
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+.exp-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.exp-bullets li {
+  font-size: 0.82rem;
+  color: var(--body-txt);
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.exp-bullets li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 0.7rem;
+  top: 1px;
+}
+
+/* ===== SPECIALISATION ===== */
+#skills { background: var(--bg2); }
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.skill-card {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.skill-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+}
+
+.skill-card-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(201,168,76,0.1);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+}
+
+.skill-card-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.skill-card-desc {
+  font-size: 0.8rem;
+  color: var(--body-txt);
+  line-height: 1.7;
+}
+
+/* ===== EDUCATION ===== */
+#education { background: var(--bg); }
+
+.edu-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 36px 40px;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  max-width: 680px;
+}
+
+.edu-logo {
+  width: 64px;
+  height: 64px;
+  background: #C8102E;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.edu-logo span {
+  font-size: 0.78rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+.edu-logo small {
+  font-size: 0.38rem;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.3px;
+  text-align: center;
+  margin-top: 3px;
+}
+
+.edu-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.edu-body p {
+  font-size: 0.85rem;
+  color: var(--body-txt);
+  line-height: 1.6;
+}
+
+.edu-badge {
+  display: inline-block;
+  background: rgba(201,168,76,0.12);
+  border: 1px solid rgba(201,168,76,0.3);
+  color: var(--gold);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+/* ===== CONTACT ===== */
+#contact {
+  background: var(--bg2);
+  text-align: center;
+}
+
+#contact .section-eyebrow { justify-content: center; }
+#contact .section-eyebrow::before { display: none; }
+#contact .section-title { margin-bottom: 16px; }
+
+.contact-sub {
+  color: var(--body-txt);
+  font-size: 0.9rem;
+  max-width: 440px;
+  margin: 0 auto 40px;
+  line-height: 1.8;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contact-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 22px;
+  color: var(--body-txt);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.contact-chip:hover { border-color: var(--gold); color: var(--gold); }
+
+.contact-chip svg { opacity: 0.6; }
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 28px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer p {
+  font-size: 0.75rem;
+  color: var(--dim);
+}
+
+/* ===== SCROLL REVEAL ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  nav { padding: 16px 24px; }
+  .nav-links { display: none; }
+  #hero, section { padding: 80px 24px; }
+  .hero-inner { flex-direction: column-reverse; gap: 40px; }
+  .hero-img-wrap { width: 100%; max-width: 300px; height: 320px; }
+  .acca-chip { left: 0; bottom: -20px; }
+  .hero-stats { flex-direction: column; gap: 20px; }
+  .stat-item { border-right: none; border-bottom: 1px solid var(--border); padding-bottom: 20px; margin: 0; }
+  .stat-item:last-child { border-bottom: none; }
+  .about-grid { grid-template-columns: 1fr; gap: 36px; }
+  .exp-item { grid-template-columns: 1fr; }
+  .exp-item::before { display: none; }
+  .exp-dot { display: none; }
+  .exp-left { align-items: flex-start; padding: 20px 0 0; }
+  .exp-right { padding: 12px 0 20px; border-left: none; border-top: 1px solid var(--border); }
+  .skills-grid { grid-template-columns: 1fr 1fr; }
+  footer { flex-direction: column; gap: 8px; text-align: center; }
+}
+
+@media (max-width: 560px) {
+  .skills-grid { grid-template-columns: 1fr; }
+  .bring-grid { grid-template-columns: 1fr; }
+  .edu-card { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">A · S</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-text">ACCA</div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Accounting · VAT · Taxation</p>
+      <h1 class="hero-name">
+        <span class="firstname">Asiya</span>
+        <span class="lastname">Ahmed Sami</span>
+      </h1>
+      <p class="hero-tagline">
+        3+ Years of Financial Expertise in the UK. Private Practitioner specialising in Accounting, VAT Compliance, Corporation Tax, and multi-entity financial reporting.
+      </p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Get in Touch</a>
+        <a href="#experience" class="btn-outline">View Experience</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">3+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">100+</div>
+          <div class="stat-label">UK VAT & Tax Filings</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">ACCA</div>
+          <div class="stat-label">Part 2 Completed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">UK</div>
+          <div class="stat-label">Based Practice</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-img-wrap">
+        <div class="hero-img-placeholder" style="background:var(--bg3); border:1px solid var(--border); border-radius:4px; overflow:hidden; padding:0;">
+          <svg viewBox="0 0 340 420" xmlns="http://www.w3.org/2000/svg" width="340" height="420" style="display:block;">
+            <!-- Background gradient -->
+            <defs>
+              <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#1a1a1a"/>
+                <stop offset="100%" stop-color="#0e0e0e"/>
+              </linearGradient>
+              <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#c9a84c"/>
+                <stop offset="100%" stop-color="#e2c07a"/>
+              </linearGradient>
+              <linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#c9a84c"/>
+                <stop offset="100%" stop-color="#e2c07a"/>
+              </linearGradient>
+              <!-- Glow filter -->
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+
+            <rect width="340" height="420" fill="url(#bgGrad)"/>
+
+            <!-- Subtle grid lines -->
+            <g opacity="0.04" stroke="#c9a84c" stroke-width="0.5">
+              <line x1="0" y1="70" x2="340" y2="70"/>
+              <line x1="0" y1="140" x2="340" y2="140"/>
+              <line x1="0" y1="210" x2="340" y2="210"/>
+              <line x1="0" y1="280" x2="340" y2="280"/>
+              <line x1="0" y1="350" x2="340" y2="350"/>
+              <line x1="68" y1="0" x2="68" y2="420"/>
+              <line x1="136" y1="0" x2="136" y2="420"/>
+              <line x1="204" y1="0" x2="204" y2="420"/>
+              <line x1="272" y1="0" x2="272" y2="420"/>
+            </g>
+
+            <!-- Top accent line -->
+            <rect x="0" y="0" width="340" height="2" fill="url(#goldGrad)"/>
+
+            <!-- ===== MAIN LAPTOP / DESK ILLUSTRATION ===== -->
+
+            <!-- Desk surface -->
+            <ellipse cx="170" cy="360" rx="150" ry="18" fill="#111" opacity="0.7"/>
+
+            <!-- Monitor base pole -->
+            <rect x="162" y="295" width="16" height="40" rx="3" fill="#222"/>
+            <!-- Monitor base stand -->
+            <rect x="140" y="330" width="60" height="8" rx="4" fill="#252525"/>
+
+            <!-- Monitor body -->
+            <rect x="60" y="120" width="220" height="180" rx="8" fill="#1c1c1c" stroke="#333" stroke-width="1.5"/>
+            <!-- Monitor screen -->
+            <rect x="70" y="130" width="200" height="160" rx="5" fill="#0a0a0a"/>
+            <!-- Screen glow -->
+            <rect x="70" y="130" width="200" height="160" rx="5" fill="none" stroke="#c9a84c" stroke-width="0.5" opacity="0.3"/>
+
+            <!-- Screen content: spreadsheet / accounting UI -->
+            <!-- Header bar -->
+            <rect x="70" y="130" width="200" height="20" rx="5" fill="#161616"/>
+            <rect x="70" y="144" width="200" height="6" fill="#161616"/>
+            <!-- Dots -->
+            <circle cx="84" cy="140" r="3.5" fill="#ff5f57"/>
+            <circle cx="96" cy="140" r="3.5" fill="#ffbd2e"/>
+            <circle cx="108" cy="140" r="3.5" fill="#28ca42"/>
+            <!-- Title bar text lines -->
+            <rect x="120" y="137" width="80" height="6" rx="2" fill="#2a2a2a"/>
+
+            <!-- Spreadsheet rows -->
+            <!-- Column headers -->
+            <rect x="75" y="152" width="190" height="12" fill="#141414"/>
+            <rect x="75" y="152" width="40" height="12" fill="#1e1e1e"/>
+            <line x1="115" y1="152" x2="115" y2="288" stroke="#252525" stroke-width="0.8"/>
+            <line x1="160" y1="152" x2="160" y2="288" stroke="#252525" stroke-width="0.8"/>
+            <line x1="215" y1="152" x2="215" y2="288" stroke="#252525" stroke-width="0.8"/>
+            <line x1="260" y1="152" x2="260" y2="288" stroke="#252525" stroke-width="0.8"/>
+
+            <!-- Header text rects -->
+            <rect x="80" y="155" width="28" height="5" rx="1.5" fill="#444"/>
+            <rect x="119" y="155" width="34" height="5" rx="1.5" fill="#444"/>
+            <rect x="163" y="155" width="42" height="5" rx="1.5" fill="#444"/>
+            <rect x="218" y="155" width="36" height="5" rx="1.5" fill="#444"/>
+
+            <!-- Row lines -->
+            <g opacity="0.8">
+              <!-- Row 1 -->
+              <rect x="75" y="164" width="190" height="11" fill="#0f0f0f"/>
+              <rect x="79" y="167" width="30" height="5" rx="1.5" fill="#2a2a2a"/>
+              <rect x="119" y="167" width="28" height="5" rx="1.5" fill="#2a2a2a"/>
+              <rect x="183" y="167" width="24" height="5" rx="1.5" fill="#c9a84c" opacity="0.7"/>
+              <rect x="221" y="167" width="32" height="5" rx="1.5" fill="#2a2a2a"/>
+              <!-- Row 2 -->
+              <rect x="75" y="175" width="190" height="11" fill="#111"/>
+              <rect x="79" y="178" width="26" height="5" rx="1.5" fill="#2a2a2a"/>
+              <rect x="119" y="178" width="32" height="5" rx="1.5" fill="#2a2a2a"/>
+              <rect x="179" y="178" width="28" height="5" rx="1.5" fill="#28ca42" opacity="0.6"/>
+              <rect x="221" y="178" width="28" height="5" rx="1.5" fill="#2a2a2a"/>
+              <!-- Row 3 highlighted -->
+              <rect x="75" y="186" width="190" height="11" fill="rgba(201,168,76,0.06)"/>
+              <rect x="79" y="189" width="32" height="5" rx="1.5" fill="#c9a84c" opacity="0.5"/>
+              <rect x="119" y="189" width="24" height="5" rx="1.5" fill="#c9a84c" opacity="0.4"/>
+              <rect x="175" y="189" width="32" height="5" rx="1.5" fill="#c9a84c" opacity="0.8"/>
+              <rect x="221" y="189" width="30" height="5" rx="1.5" fill="#c9a84c" opacity="0.4"/>
+              <!-- Row 4 -->
+              <rect x="75" y="197" width="190" height="11" fill="#0f0f0f"/>
+              <rect x="79" y="200" width="28" height="5" rx="1.5" fill="#2a2a2a"/>
+              <rect x="119" y="200" width="36" height="5" rx="1.5" fill="#2a2a2a"/>
+              <rect x="181" y="200" width="26" height="5" rx="1.5" fill="#2a2a2a"/>
+              <rect x="221" y="200" width="34" height="5" rx="1.5" fill="#ff5f57" opacity="0.5"/>
+              <!-- Row 5 -->
+              <rect x="75" y="208" width="190" height="11" fill="#111"/>
+              <rect x="79" y="211" width="24" height="5" rx="1.5" fill="#2a2a2a"/>
+              <rect x="119" y="211" width="30" height="5" rx="1.5" fill="#2a2a2a"/>
+              <rect x="177" y="211" width="30" height="5" rx="1.5" fill="#28ca42" opacity="0.5"/>
+              <rect x="221" y="211" width="26" height="5" rx="1.5" fill="#2a2a2a"/>
+            </g>
+
+            <!-- Mini bar chart inside screen -->
+            <rect x="78" y="228" width="90" height="50" rx="3" fill="#0d0d0d" stroke="#222" stroke-width="0.8"/>
+            <!-- Chart bars -->
+            <rect x="85" y="258" width="8" height="14" rx="1.5" fill="#c9a84c" opacity="0.5"/>
+            <rect x="97" y="248" width="8" height="24" rx="1.5" fill="#c9a84c" opacity="0.7"/>
+            <rect x="109" y="242" width="8" height="30" rx="1.5" fill="#c9a84c" opacity="0.9" filter="url(#glow)"/>
+            <rect x="121" y="252" width="8" height="20" rx="1.5" fill="#c9a84c" opacity="0.6"/>
+            <rect x="133" y="245" width="8" height="27" rx="1.5" fill="#c9a84c" opacity="0.8"/>
+            <rect x="145" y="238" width="8" height="34" rx="1.5" fill="url(#goldGrad)" filter="url(#glow)"/>
+            <!-- Chart baseline -->
+            <line x1="82" y1="272" x2="158" y2="272" stroke="#333" stroke-width="0.8"/>
+            <!-- Chart label -->
+            <rect x="82" y="231" width="40" height="4" rx="1.5" fill="#2a2a2a"/>
+
+            <!-- Mini pie / donut chart -->
+            <circle cx="225" cy="253" r="22" fill="none" stroke="#1e1e1e" stroke-width="12"/>
+            <circle cx="225" cy="253" r="22" fill="none" stroke="#c9a84c" stroke-width="12"
+              stroke-dasharray="69 69" stroke-dashoffset="17" opacity="0.9" filter="url(#glow)"/>
+            <circle cx="225" cy="253" r="22" fill="none" stroke="#28ca42" stroke-width="12"
+              stroke-dasharray="28 110" stroke-dashoffset="-52" opacity="0.5"/>
+            <!-- Donut center -->
+            <circle cx="225" cy="253" r="13" fill="#0a0a0a"/>
+            <rect x="217" y="250" width="16" height="5" rx="1.5" fill="#c9a84c" opacity="0.8"/>
+
+            <!-- Keyboard -->
+            <rect x="80" y="340" width="180" height="16" rx="4" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+            <!-- Keyboard keys rows -->
+            <g fill="#252525">
+              <rect x="86" y="343" width="10" height="4" rx="1"/>
+              <rect x="99" y="343" width="10" height="4" rx="1"/>
+              <rect x="112" y="343" width="10" height="4" rx="1"/>
+              <rect x="125" y="343" width="10" height="4" rx="1"/>
+              <rect x="138" y="343" width="10" height="4" rx="1"/>
+              <rect x="151" y="343" width="10" height="4" rx="1"/>
+              <rect x="164" y="343" width="10" height="4" rx="1"/>
+              <rect x="177" y="343" width="10" height="4" rx="1"/>
+              <rect x="190" y="343" width="16" height="4" rx="1"/>
+              <!-- Spacebar -->
+              <rect x="110" y="350" width="80" height="4" rx="1.5" fill="#2a2a2a"/>
+            </g>
+
+            <!-- Floating elements -->
+            <!-- VAT tag top right -->
+            <rect x="248" y="48" width="68" height="28" rx="5" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+            <rect x="252" y="56" width="18" height="4" rx="1.5" fill="#c9a84c" opacity="0.9"/>
+            <rect x="274" y="56" width="36" height="4" rx="1.5" fill="#333"/>
+            <rect x="252" y="63" width="56" height="4" rx="1.5" fill="#222"/>
+
+            <!-- £ symbol badge -->
+            <circle cx="42" cy="180" r="22" fill="#141414" stroke="#2a2a2a" stroke-width="1"/>
+            <text x="42" y="186" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#c9a84c" filter="url(#glow)">£</text>
+
+            <!-- Tax return doc -->
+            <rect x="24" y="240" width="52" height="64" rx="4" fill="#141414" stroke="#2a2a2a" stroke-width="1"/>
+            <rect x="30" y="250" width="18" height="4" rx="1.5" fill="#c9a84c" opacity="0.7"/>
+            <rect x="30" y="258" width="36" height="3" rx="1.5" fill="#2a2a2a"/>
+            <rect x="30" y="264" width="30" height="3" rx="1.5" fill="#2a2a2a"/>
+            <rect x="30" y="270" width="34" height="3" rx="1.5" fill="#2a2a2a"/>
+            <rect x="30" y="276" width="26" height="3" rx="1.5" fill="#2a2a2a"/>
+            <rect x="30" y="284" width="36" height="6" rx="2" fill="#c9a84c" opacity="0.15"/>
+            <rect x="32" y="286" width="24" height="3" rx="1.5" fill="#c9a84c" opacity="0.6"/>
+
+            <!-- HMRC label at bottom of doc -->
+            <rect x="30" y="292" width="28" height="6" rx="2" fill="#1e1e1e"/>
+            <rect x="32" y="294" width="22" height="3" rx="1" fill="#444"/>
+
+            <!-- Bottom label bar -->
+            <rect x="0" y="395" width="340" height="25" fill="rgba(0,0,0,0.5)"/>
+            <text x="170" y="412" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#c9a84c" letter-spacing="3" opacity="0.8">ACCOUNTING · VAT · TAXATION</text>
+          </svg>
+        </div>
+        <div class="hero-img-deco"></div>
+        <div class="acca-chip">
+          <div class="acca-chip-logo">ACCA</div>
+          <div class="acca-chip-text">
+            <div class="top">ACCA Part 2</div>
+            <div class="bot">Completed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <p class="section-eyebrow">About</p>
+    <div class="about-grid reveal">
+      <div class="about-left">
+        <h3>Accountant &amp; <em>Tax Specialist</em></h3>
+        <p>
+          I am a UK-based experienced Accountant specialising in Accounting, VAT and Taxation. Currently operating as a Private Practitioner, I provide end-to-end financial services to businesses across a range of sectors.
+        </p>
+        <p>
+          My expertise spans UK statutory accounts preparation, HMRC Corporation Tax filings, VAT compliance, multi-entity bookkeeping, and financial reporting. I have hands-on experience managing UK VAT &amp; Corporation Tax filings and am proficient in cloud accounting platforms including Xero and QuickBooks.
+        </p>
+        <p>
+          Based in the UK, I bridge the gap between UK regulatory frameworks — bringing rigour, efficiency, and leadership to every finance function I work with.
+        </p>
+      </div>
+      <div class="about-right">
+        <h4>What I Bring</h4>
+        <div class="bring-grid">
+          <div class="bring-item">BD VAT &amp; Tax</div>
+          <div class="bring-item">UK VAT &amp; Corp Tax</div>
+          <div class="bring-item">Tax Planning</div>
+          <div class="bring-item">Financial Reporting</div>
+          <div class="bring-item">Xero &amp; QuickBooks</div>
+          <div class="bring-item">Data Analysis</div>
+          <div class="bring-item">Budgeting</div>
+          <div class="bring-item">Internal Auditing</div>
+          <div class="bring-item">A/P &amp; A/R Mgmt</div>
+          <div class="bring-item">Cash Flow Forecast</div>
+          <div class="bring-item">Multi-Currency</div>
+          <div class="bring-item">Regulatory Compliance</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-inner">
+    <p class="section-eyebrow">Career</p>
+    <h2 class="section-title">Professional<br>Experience</h2>
+
+    <div class="exp-timeline">
+
+      <!-- Job 1 -->
+      <div class="exp-item reveal">
+        <div class="exp-left">
+          <span class="exp-dates">2022 — Present</span>
+          <span class="exp-type">Full Time</span>
+        </div>
+        <div class="exp-dot"></div>
+        <div class="exp-right">
+          <span class="exp-current-badge">● Currently Here</span>
+          <h3 class="exp-role">Private Practitioner — Accounting &amp; Taxation</h3>
+          <p class="exp-company">Self-Employed · United Kingdom</p>
+          <p class="exp-desc">
+            Operating as an independent accounting practitioner in the UK, providing comprehensive accounting, VAT, and tax compliance services to a diverse portfolio of clients. Responsibilities span the full lifecycle of financial management — from bookkeeping and management accounts to VAT return submissions and corporation tax filings.
+          </p>
+          <ul class="exp-bullets">
+            <li>Preparation and submission of UK VAT returns and Corporation Tax filings for multiple client companies, ensuring accuracy and full compliance with HMRC regulations.</li>
+            <li>Delivered end-to-end bookkeeping and financial reporting using Xero and QuickBooks, maintaining clean and audit-ready records for clients.</li>
+            <li>Advised clients on tax planning strategies to optimise their tax positions within the framework of UK tax law, reducing liabilities where applicable.</li>
+            <li>Managed multi-currency transactions and produced financial statements for businesses operating across international markets.</li>
+            <li>Developed strong client relationships built on accuracy, reliability, and timely delivery — becoming the trusted financial partner for each client.</li>
+            <li>Prepared and reviewed management accounts on a monthly and quarterly basis, providing meaningful financial insights to business owners.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS / SPECIALISATION -->
+<section id="skills">
+  <div class="section-inner">
+    <p class="section-eyebrow">Expertise</p>
+    <h2 class="section-title">Areas of<br>Specialisation</h2>
+    <div class="skills-grid">
+
+      <div class="skill-card reveal">
+        <div class="skill-card-icon">🇧🇩</div>
+        <h4 class="skill-card-title">BD VAT &amp; Tax</h4>
+        <p class="skill-card-desc">In-depth knowledge of Bangladeshi VAT and Turnover Tax regulations with practical filing experience.</p>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card-icon">🇬🇧</div>
+        <h4 class="skill-card-title">UK VAT &amp; Corporation Tax</h4>
+        <p class="skill-card-desc">100+ UK VAT returns and Corporation Tax filings. Full compliance with HMRC standards.</p>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card-icon">📊</div>
+        <h4 class="skill-card-title">Financial Reporting</h4>
+        <p class="skill-card-desc">Preparation of management accounts, financial statements, and year-end accounts to professional standards.</p>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card-icon">☁️</div>
+        <h4 class="skill-card-title">Xero &amp; QuickBooks</h4>
+        <p class="skill-card-desc">Expert-level proficiency in cloud accounting platforms — from setup and migration to ongoing monthly management.</p>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card-icon">📈</div>
+        <h4 class="skill-card-title">Budgeting &amp; Forecasting</h4>
+        <p class="skill-card-desc">Building detailed budgets, cash flow forecasts, and financial models to support strategic business decisions.</p>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card-icon">🔍</div>
+        <h4 class="skill-card-title">Internal Auditing</h4>
+        <p class="skill-card-desc">Designing and executing internal controls, identifying risks, and building SOP frameworks for finance teams.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-inner">
+    <p class="section-eyebrow">Academic Background</p>
+    <h2 class="section-title">Education</h2>
+    <div class="edu-card reveal">
+      <div class="edu-logo">
+        <span>ACCA</span>
+        <small>GLOBAL BODY FOR<br>PROFESSIONAL<br>ACCOUNTANTS</small>
+      </div>
+      <div class="edu-body">
+        <h3>ACCA — Association of Chartered Certified Accountants</h3>
+        <p>Strategic Professional Level · Part 2 Completed</p>
+        <p style="margin-top:6px; font-size:0.8rem; color:var(--dim);">Global qualification in accounting, tax, financial management and audit.</p>
+        <span class="edu-badge">Part 2 Completed</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <p class="section-eyebrow">Get in Touch</p>
+    <h2 class="section-title">Let's<br>Connect</h2>
+    <p class="contact-sub">
+      Open to professional enquiries, collaborations, and new client relationships in accounting and taxation.
+    </p>
+    <div class="contact-row">
+      <a href="mailto:asiya.sami@email.com" class="contact-chip">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        asiya.sami@email.com
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Asiya Ahmed Sami. All rights reserved.</p>
+  <p>Accountant &amp; Tax Specialist · United Kingdom</p>
+</footer>
+
+<!-- SCROLL REVEAL SCRIPT -->
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
